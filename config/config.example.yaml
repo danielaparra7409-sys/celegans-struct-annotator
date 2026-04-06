@@ -1,0 +1,18 @@
+project_name: celegans-struct-annotator
+
+paths:
+  metadata_file: ../example_inputs/metadata.xlsx
+  query_cif_dir: ../example_inputs/cif_queries
+  foldseek_bin: /usr/local/bin/foldseek
+  target_database: ../example_inputs/foldseek_db/test_db
+  foldseek_output_tsv: ../example_outputs/foldseek_results.tsv
+  tmp_dir: ../tmp/foldseek
+
+run:
+  top_hits: 10
+
+uniprot:
+  enabled: false
+
+alphafold:
+  enabled: false

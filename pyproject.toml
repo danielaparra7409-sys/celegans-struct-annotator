@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "celegans-struct-annotator"
+version = "0.1.0"
+description = "Local-first MVP scaffold for structural annotation workflows."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "openpyxl>=3.1",
+  "pandas>=2.0",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+validate-local = "src.main:validate_local_entrypoint"
+run-foldseek = "src.main:run_foldseek_entrypoint"
+parse-results = "src.main:parse_results_entrypoint"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

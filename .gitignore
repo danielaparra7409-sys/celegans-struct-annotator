@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Environment
+.env
+config/config.local.yaml
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# Data and results
+data/raw/*
+data/interim/*
+data/processed/*
+structures/downloads/*
+databases/optional_large_db/*
+results/foldseek/*
+results/tables/*
+results/reports/*
+logs/*
+
+# Keep folders
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!structures/downloads/.gitkeep
+!databases/optional_large_db/.gitkeep
+!results/foldseek/.gitkeep
+!results/tables/.gitkeep
+!results/reports/.gitkeep
+!logs/.gitkeep
