@@ -12,10 +12,10 @@ class ConfigError(ValueError):
 
 @dataclass(frozen=True)
 class PathsConfig:
-    metadata_file: Path
+    metadata_file: Path | None
     query_cif_dir: Path
     foldseek_bin: Path
-    target_database: Path
+    target_database: Path | None
     foldseek_output_tsv: Path
     tmp_dir: Path
 
@@ -39,6 +39,27 @@ def _resolve_path(raw_value: str, config_dir: Path) -> Path:
     return path
 
 
+def _get_required_path(
+    raw_paths: dict[str, str], config_dir: Path, *keys: str
+) -> Path:
+    for key in keys:
+        value = raw_paths.get(key)
+        if value:
+            return _resolve_path(value, config_dir)
+    joined_keys = ", ".join(keys)
+    raise ConfigError(f"Missing required path config key. Expected one of: {joined_keys}")
+
+
+def _get_optional_path(
+    raw_paths: dict[str, str], config_dir: Path, *keys: str
+) -> Path | None:
+    for key in keys:
+        value = raw_paths.get(key)
+        if value:
+            return _resolve_path(value, config_dir)
+    return None
+
+
 def load_config(config_path: Path) -> AppConfig:
     config_path = Path(config_path).expanduser().resolve()
     if not config_path.exists():
@@ -54,12 +75,14 @@ def load_config(config_path: Path) -> AppConfig:
 
     config_dir = config_path.parent
     paths = PathsConfig(
-        metadata_file=_resolve_path(raw_paths["metadata_file"], config_dir),
-        query_cif_dir=_resolve_path(raw_paths["query_cif_dir"], config_dir),
-        foldseek_bin=_resolve_path(raw_paths["foldseek_bin"], config_dir),
-        target_database=_resolve_path(raw_paths["target_database"], config_dir),
-        foldseek_output_tsv=_resolve_path(raw_paths["foldseek_output_tsv"], config_dir),
-        tmp_dir=_resolve_path(raw_paths["tmp_dir"], config_dir),
+        metadata_file=_get_optional_path(raw_paths, config_dir, "metadata_file"),
+        query_cif_dir=_get_required_path(raw_paths, config_dir, "query_cif_dir", "local_cif_dir"),
+        foldseek_bin=_get_required_path(raw_paths, config_dir, "foldseek_bin"),
+        target_database=_get_optional_path(raw_paths, config_dir, "target_database", "test_database_dir"),
+        foldseek_output_tsv=_get_required_path(
+            raw_paths, config_dir, "foldseek_output_tsv", "local_foldseek_results"
+        ),
+        tmp_dir=_get_required_path(raw_paths, config_dir, "tmp_dir"),
     )
 
     run_section = payload.get("run") or {}
