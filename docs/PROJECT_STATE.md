@@ -52,3 +52,14 @@ Check CLI behavior with `config.local.yaml` and test `parse-results` using the n
 - review and improve result_parser column semantics for this Foldseek output
 - keep using Domains as the main local source
 - do not rerun large SwissProt jobs yet
+
+## Parser semantics update
+- The 6-column Foldseek output now uses explicit compact semantics:
+  - query
+  - target
+  - fident
+  - alnlen
+  - evalue
+  - bits
+- Tests pass after the update
+- Local preview with parse-results still works on test5_vs_swissprot.m8
