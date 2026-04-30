@@ -89,3 +89,52 @@ def add_functional_labels(
     )
     labeled["label_source"] = chosen_column
     return labeled
+def merge_annotations_and_label(
+    frame: pd.DataFrame,
+    annotations: pd.DataFrame,
+    *,
+    target_column: str = "target",
+    annotation_key: str = "target",
+    description_column: str = "hit_description",
+) -> pd.DataFrame:
+    """
+    Merge parsed Foldseek results with an annotation lookup table and assign labels.
+
+    Parameters
+    ----------
+    frame
+        Parsed Foldseek dataframe.
+    annotations
+        Annotation dataframe containing at least:
+        - annotation_key
+        - description_column
+    target_column
+        Column in the parsed dataframe used for matching.
+    annotation_key
+        Column in the annotation dataframe used for matching.
+    description_column
+        Column containing functional description text.
+
+    Returns
+    -------
+    pd.DataFrame
+        Merged dataframe with family_label and label_source added.
+    """
+    required = {annotation_key, description_column}
+    missing = required.difference(annotations.columns)
+    if missing:
+        raise ValueError(
+            f"Annotation dataframe is missing required columns: {sorted(missing)}"
+        )
+
+    merged = frame.merge(
+        annotations[[annotation_key, description_column]].drop_duplicates(),
+        left_on=target_column,
+        right_on=annotation_key,
+        how="left",
+    )
+
+    if annotation_key != target_column and annotation_key in merged.columns:
+        merged = merged.drop(columns=[annotation_key])
+
+    return add_functional_labels(merged, text_column=description_column)
