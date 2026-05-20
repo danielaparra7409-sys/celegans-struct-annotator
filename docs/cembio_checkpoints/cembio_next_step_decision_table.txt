@@ -1,0 +1,149 @@
+CeMbio next-step decision table
+===============================
+
+Purpose
+-------
+This file summarizes the possible next routes after preparing the CeMbio/Jose proteome dataset.
+
+Current checkpoint
+------------------
+- 12 proteome FASTA files downloaded locally.
+- 55,534 proteins represented in the master table.
+- No duplicated record_id values.
+- No empty sequences.
+- Header formats classified.
+- Accession inventory created.
+- Minimal organism-level metadata created.
+- Current identifiers are not direct UniProt accessions.
+
+Main technical issue
+--------------------
+The current protein identifiers are derived from ENA, GenBank, RefSeq, assemblies, or contigs.
+They are not direct UniProt accessions, so the previous AlphaFold DB workflow cannot be run directly on these FASTA files.
+
+Decision routes
+---------------
+
+1. Ask Jose for original annotation files
+
+Description:
+Request the original annotation files associated with the proteomes.
+
+Useful file types:
+- GFF
+- GBFF
+- GBK
+- feature_table
+- protein_table
+- Prokka output
+- Bakta output
+- NCBI annotation report
+- Any table with protein_id, locus_tag, product, gene, strain, assembly accession, or UniProt cross-reference
+
+Advantages:
+- Best route if available.
+- Preserves the original link between protein IDs and biological annotation.
+- May provide product names, genes, locus tags, and possibly database cross-references.
+- Makes the master table biologically interpretable.
+
+Limitations:
+- Depends on Jose having the files.
+- May still not include UniProt accessions.
+- File formats may differ between organisms.
+
+Decision:
+This is the preferred immediate route.
+
+2. Search public metadata by accession
+
+Description:
+Use source accessions such as CP058272, CP058554, CP058553, NZ_RJVC02000001, CP059139, and others to search public databases.
+
+Possible sources:
+- NCBI Assembly
+- NCBI Protein
+- NCBI Nucleotide
+- ENA
+- UniProt ID mapping, if possible later
+
+Advantages:
+- Can recover assembly, strain, organism, and annotation metadata.
+- Useful if Jose does not have annotation files.
+- Helps verify whether the proteomes are linked to public records.
+
+Limitations:
+- Requires careful mapping.
+- Some FASTA protein IDs may not map directly to UniProt.
+- Public records may not contain all protein-level annotations in the same format.
+
+Decision:
+Useful second route, especially if Jose cannot provide annotation files.
+
+3. Functional annotation by sequence homology
+
+Description:
+Use the protein sequences directly against curated or semi-curated databases.
+
+Possible tools/databases:
+- BLASTp against SwissProt
+- MMseqs2 against UniProt/SwissProt
+- HMMER against Pfam
+- eggNOG-mapper
+- InterProScan, if available later
+
+Advantages:
+- Does not require UniProt accession input.
+- Can produce functional clues from the actual sequences.
+- Useful for large-scale functional annotation.
+
+Limitations:
+- Gives homologs or predicted function, not necessarily exact identity.
+- Does not automatically give AlphaFold structures for the original proteins.
+- Needs careful thresholds and interpretation.
+
+Decision:
+Good alternative for functional annotation, but should come after metadata organization.
+
+4. Select a structural subset
+
+Description:
+Instead of trying to structurally analyze all 55,534 proteins, select a smaller subset based on criteria.
+
+Possible criteria:
+- Secreted proteins
+- Short proteins or microdomains
+- Proteins with unknown function
+- Effector-like candidates
+- Proteins with interesting domain hits
+- Proteins from host-associated vs free-living comparison, if metadata becomes available
+
+Advantages:
+- More realistic computationally.
+- Better aligned with thesis questions about functional inference and microdomains.
+- Avoids trying to predict or compare structures for an enormous raw proteome set.
+
+Limitations:
+- Requires filtering criteria first.
+- Needs secretion prediction or annotation evidence.
+- Should not be done before deciding how to define the biological subset.
+
+Decision:
+Important later, but not the immediate next step.
+
+Recommended next action
+-----------------------
+The immediate next action should be to ask Jose for the original annotation files or metadata associated with the 12 proteomes.
+
+If Jose has those files, inspect and merge them with the master table.
+If Jose does not have them, use the accession inventory to search public metadata and build a controlled local metadata table.
+
+Not recommended yet
+-------------------
+- Do not run Foldseek on the full CeMbio dataset yet.
+- Do not run the old AlphaFold DB workflow directly on these FASTA files.
+- Do not assume the current record_id values are UniProt accessions.
+- Do not jump to figures before metadata and filtering are clearer.
+
+Decision for next session
+-------------------------
+Prepare a precise message to Jose requesting annotation files and metadata.

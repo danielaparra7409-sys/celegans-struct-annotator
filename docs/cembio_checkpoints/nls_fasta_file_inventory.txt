@@ -1,0 +1,58 @@
+NLS FASTA and Excel file inventory
+=================================
+
+Date: Tue May 19 20:08:25 -05 2026
+
+Metadata files detected:
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Acinetobacter guillouiae/NLSFasta.txt
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Acinetobacter guillouiae/NLS_nucleotide.fasta
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Chryseobacterium scophthalmum/NLSFasta.txt
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Chryseobacterium scophthalmum/NLS_nucleotide.fasta
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Comamonas piscis/NLSFasta.txt
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Comamonas piscis/NLS_nucleotide.fasta
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Enterobacter hormaechei/NLSFasta.txt
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Enterobacter hormaechei/NLS_nucleotide.fasta
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Lelliottia amnigena/NLSFasta.txt
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Lelliottia amnigena/NLS_nucleotide.fasta
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Ochrobactrum vermis/NLSFasta.txt
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Ochrobactrum vermis/NLS_nucleotide.fasta
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Pantoea nemavictus/NLSFasta.txt
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Pantoea nemavictus/NLS_nucleotide.fasta
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Pantoea nemavictus/Pantoea_nemavictus.fasta
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Pseudomonas berkeleyensis/NLSFasta.txt
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Pseudomonas berkeleyensis/NLS_nucleotide.fasta
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Pseudomonas berkeleyensis/Pseudomonas berkeleyensis.fasta
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Pseudomonas lurida/NLSFasta.txt
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Pseudomonas lurida/NLS_nucleotide.fasta
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Pseudomonas lurida/Pseudomonas lurida.fasta
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Sphingobacterium moltivorum/NLSFasta.txt
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Sphingobacterium moltivorum/NLS_nucleotide.fasta
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Sphingobacterium moltivorum/Sphingobacterium_moltivorum_aa.fasta
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Sphingomonas molluscorum/NLSFasta.txt
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Sphingomonas molluscorum/NLS_nucleotide.fasta
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Sphingomonas molluscorum/Sphingomonas_molluscorum_aa.fasta
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Stenotrophomonas indicatrix/NLSFasta.txt
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Stenotrophomonas indicatrix/NLS_nucleotide.fasta
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Stenotrophomonas indicatrix/Stenotrophomonas_aa.fasta
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/cembio_nls_candidates_jose.xlsx
+
+Number of files under NLSFasta:
+30
+
+Files by extension:
+     18 fasta
+     12 txt
+
+Species folders:
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Acinetobacter guillouiae
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Chryseobacterium scophthalmum
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Comamonas piscis
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Enterobacter hormaechei
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Lelliottia amnigena
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Ochrobactrum vermis
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Pantoea nemavictus
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Pseudomonas berkeleyensis
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Pseudomonas lurida
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Sphingobacterium moltivorum
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Sphingomonas molluscorum
+/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio/metadata/NLSFasta/Stenotrophomonas indicatrix

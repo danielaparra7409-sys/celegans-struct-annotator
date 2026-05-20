@@ -1,0 +1,33 @@
+CeMbio master table summary
+===========================
+
+Rows/proteins: 55534
+Columns: source_file, organism_guess, record_id, raw_header, sequence_length, id_type_guess
+
+Proteins per organism:
+organism_guess
+Acinetobacter_guillouiae         4245
+Chryseobacterium_scophthalmum    4204
+Comamonas_piscis                 4598
+Enterobacter_hormaechei          4461
+Lelliottia_amnigena              4218
+Ochrobactrum_vermis              5197
+Pantoea_nemavictus               4673
+Pseudomonas_berkeleyensis        5159
+Pseudomonas_lurida               5462
+Sphingobacterium_multivorum      5397
+Sphingomonas_molluscorum         3830
+Stenotrophomonas_indicatrix      4090
+
+Header type counts:
+id_type_guess
+ENA_pipe_header                            24163
+assembly_or_contig_protein_header          18164
+RefSeq_or_GenBank_NZ_contig_header          8048
+GenBank_accession_contig_protein_header     5159
+
+Unknown header rows: 0
+Duplicated record_id: 0
+Min sequence length: 29
+Max sequence length: 6017
+Mean sequence length: 324.56

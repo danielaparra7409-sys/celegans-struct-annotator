@@ -1,0 +1,48 @@
+CeMbio minimal metadata summary
+==============================
+
+Purpose
+-------
+This file documents the minimal organism-level metadata table created from the CeMbio/Jose FASTA headers and accession inventory.
+
+Current status
+--------------
+Organisms represented: 12
+Total proteins represented: 55534
+Metadata status values: minimal_from_fasta_headers_only
+
+Columns
+-------
+- organism_guess
+- source_files
+- accession_rows
+- total_proteins
+- header_types
+- source_accessions
+- contig_or_record_accessions
+- metadata_status
+- notes
+
+Organism-level metadata table
+-----------------------------
+               organism_guess  accession_rows  total_proteins                            header_types                                                  source_accessions
+     Acinetobacter_guillouiae               1            4245                         ENA_pipe_header                                                           CP058272
+Chryseobacterium_scophthalmum               1            4204       assembly_or_contig_protein_header                                                    JAFBBF010000001
+             Comamonas_piscis               1            4598                         ENA_pipe_header                                                           CP058554
+      Enterobacter_hormaechei               1            4461                         ENA_pipe_header                                                           CP058553
+          Lelliottia_amnigena               1            4218      RefSeq_or_GenBank_NZ_contig_header                                                    NZ_RJVC02000001
+          Ochrobactrum_vermis               3            5197       assembly_or_contig_protein_header                           PCOC01000001; PCOC01000002; PCOC01000003
+           Pantoea_nemavictus               2            4673       assembly_or_contig_protein_header                                   JACAWY010000001; JACAWY010000002
+    Pseudomonas_berkeleyensis               1            5159 GenBank_accession_contig_protein_header                                                           CP059139
+           Pseudomonas_lurida               1            5462                         ENA_pipe_header                                                           CP023272
+  Sphingobacterium_multivorum               1            5397                         ENA_pipe_header                                                           CP058555
+     Sphingomonas_molluscorum               4            3830      RefSeq_or_GenBank_NZ_contig_header NZ_SLYP02000001; NZ_SLYP02000002; NZ_SLYP02000003; NZ_SLYP02000004
+  Stenotrophomonas_indicatrix               2            4090       assembly_or_contig_protein_header                                   JACAWX010000001; JACAWX010000002
+
+Interpretation
+--------------
+This metadata table is useful as a local index of the CeMbio/Jose proteomes, but it is still minimal. It was derived from FASTA filenames and headers only. It does not yet contain protein products, genes, locus tags, strains, host/free-living status, secretion evidence, or UniProt cross-references.
+
+Decision
+--------
+The next step should not be structural analysis yet. The next step should be metadata/ID normalization: either obtain external annotation files from Jose or build a controlled local metadata table and decide an annotation strategy.

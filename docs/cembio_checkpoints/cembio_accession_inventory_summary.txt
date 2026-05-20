@@ -1,0 +1,52 @@
+CeMbio accession inventory summary
+=================================
+
+Purpose
+-------
+This file summarizes the accession/contig identifiers detected in the CeMbio/Jose proteome FASTA files. The goal is to understand what type of identifiers we currently have before attempting any UniProt, AlphaFold DB, or structural pipeline step.
+
+Current status
+--------------
+Inventory rows: 19
+Organisms: 12
+Source files: 12
+
+Header/accession types
+----------------------
+id_type_guess
+assembly_or_contig_protein_header          8
+ENA_pipe_header                            5
+RefSeq_or_GenBank_NZ_contig_header         5
+GenBank_accession_contig_protein_header    1
+
+Proteins represented by accession inventory
+------------------------------------------
+Total proteins represented: 55534
+
+Inventory by organism
+---------------------
+               organism_guess  accession_rows  proteins                            header_types
+     Acinetobacter_guillouiae               1      4245                         ENA_pipe_header
+Chryseobacterium_scophthalmum               1      4204       assembly_or_contig_protein_header
+             Comamonas_piscis               1      4598                         ENA_pipe_header
+      Enterobacter_hormaechei               1      4461                         ENA_pipe_header
+          Lelliottia_amnigena               1      4218      RefSeq_or_GenBank_NZ_contig_header
+          Ochrobactrum_vermis               3      5197       assembly_or_contig_protein_header
+           Pantoea_nemavictus               2      4673       assembly_or_contig_protein_header
+    Pseudomonas_berkeleyensis               1      5159 GenBank_accession_contig_protein_header
+           Pseudomonas_lurida               1      5462                         ENA_pipe_header
+  Sphingobacterium_multivorum               1      5397                         ENA_pipe_header
+     Sphingomonas_molluscorum               4      3830      RefSeq_or_GenBank_NZ_contig_header
+  Stenotrophomonas_indicatrix               2      4090       assembly_or_contig_protein_header
+
+Interpretation
+--------------
+The current protein identifiers are not direct UniProt accessions. They mostly correspond to ENA, GenBank, RefSeq, assembly, or contig-derived protein identifiers. Therefore, the old AlphaFold DB workflow that expects UniProt accessions should not be run directly on these FASTA files.
+
+Metadata needed next
+--------------------
+To connect these proteins to functional annotation or AlphaFold DB structures, we need additional metadata if available. Useful files would include GFF, GBFF, GBK, feature_table, protein_table, Prokka/Bakta outputs, NCBI annotation reports, or any file containing protein_id, locus_tag, product, gene, organism strain, assembly accession, or UniProt cross-references.
+
+Decision
+--------
+Before structural analysis, the next step is metadata/ID normalization. If external annotation files are available, they should be inspected and merged with the master table. If not, we should build a minimal metadata table from filenames and accession patterns, then choose an alternative annotation strategy.
