@@ -1,0 +1,44 @@
+NLS core figures summary
+========================
+
+Purpose
+-------
+This file documents the first set of exploratory figures generated from the CeMbio/Jose curated NLS candidate dataset.
+
+Current dataset status
+----------------------
+Master dataset: 55,534 proteins from 12 CeMbio/Jose proteomes.
+Curated NLS candidate dataset: 51 unique validated proteins.
+Functional categories: initial keyword-based classification requiring manual review.
+
+Figures generated
+-----------------
+01_master_proteins_per_organism.png
+02_nls_candidates_per_organism.png
+03_functional_category_counts.png
+04_heatmap_organism_by_category.png
+05_extracellular_score_distribution.png
+06_nls_score_distribution.png
+07_extracellular_vs_nls_scatter.png
+
+Figure descriptions
+-------------------
+01_master_proteins_per_organism.png: total number of proteins per organism in the full CeMbio master dataset.
+02_nls_candidates_per_organism.png: number of validated unique NLS candidates per organism.
+03_functional_category_counts.png: count of candidates per initial functional category.
+04_heatmap_organism_by_category.png: organism by functional category heatmap.
+05_extracellular_score_distribution.png: distribution of extracellular prediction scores.
+06_nls_score_distribution.png: distribution of NLS prediction scores.
+07_extracellular_vs_nls_scatter.png: relationship between extracellular score and NLS score.
+
+Interpretation
+--------------
+These figures provide the first visual summary of the curated NLS candidate subset. They help compare the full proteome background with the validated candidate subset, show how candidates are distributed across organisms, and summarize functional and score-based patterns.
+
+Important limitation
+--------------------
+The functional categories are preliminary and keyword-based. They are useful for exploration, but they should be manually reviewed before being used as final biological conclusions.
+
+Decision
+--------
+Use these figures as the first exploratory visualization set for the curated NLS candidate dataset. The next step can be either visual refinement of the figures or planning the structure retrieval workflow.

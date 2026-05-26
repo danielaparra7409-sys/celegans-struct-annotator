@@ -1,0 +1,14 @@
+NLS core figures summary
+========================
+
+Master rows: 55534
+NLS rows: 51
+
+Figures generated:
+01_master_proteins_per_organism.png
+02_nls_candidates_per_organism.png
+03_functional_category_counts.png
+04_heatmap_organism_by_category.png
+05_extracellular_score_distribution.png
+06_nls_score_distribution.png
+07_extracellular_vs_nls_scatter.png
