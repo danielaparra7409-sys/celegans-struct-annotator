@@ -35,3 +35,21 @@ logs/*
 !results/tables/.gitkeep
 !results/reports/.gitkeep
 !logs/.gitkeep
+
+# Local MMseqs working files
+work/
+
+# Large derived CeMbio tables
+docs/tables/proteome_cluster_membership_strategy.tsv
+docs/tables/proteome_cluster_membership_strategy_no_sequence.tsv
+docs/tables/proteome_structure_search_representatives_50.tsv
+docs/tables/proteome_structure_search_representatives_50_no_sequence.tsv
+
+# Large FASTA files
+*.fasta
+*.fa
+*.faa
+
+# External spreadsheets
+*.xlsx
+*.xls
