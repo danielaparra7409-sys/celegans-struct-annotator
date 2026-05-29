@@ -1,0 +1,59 @@
+NLS functional category summary
+===============================
+
+Purpose
+-------
+This file documents the first broad functional classification of the 51 validated unique NLS candidate proteins.
+Categories were assigned using keyword-based rules applied to combined BLAST, PSI-BLAST, DELTA-BLAST, pSORTB, and AlphaFold2/Foldseek annotations.
+
+Current status
+--------------
+Proteins classified: 51
+Organisms represented: 12
+
+Functional category counts
+--------------------------
+functional_category_initial
+dna_rna_related             11
+toxin_cytotoxic              6
+cell_wall_envelope           6
+secretion_system_related     6
+hypothetical_unknown         6
+phage_related                5
+nuclease_endonuclease        4
+transport_membrane           4
+other_function               3
+
+Functional categories by organism
+---------------------------------
+functional_category_initial    cell_wall_envelope  dna_rna_related  hypothetical_unknown  nuclease_endonuclease  other_function  phage_related  secretion_system_related  toxin_cytotoxic  transport_membrane
+organism_guess                                                                                                                                                                                               
+Acinetobacter_guillouiae                        1                2                     0                      0               0              1                         0                1                   0
+Chryseobacterium_scophthalmum                   1                0                     1                      2               0              0                         0                0                   2
+Comamonas_piscis                                1                2                     0                      1               0              0                         1                0                   2
+Enterobacter_hormaechei                         0                1                     0                      1               0              0                         1                0                   0
+Lelliottia_amnigena                             0                1                     0                      0               1              1                         1                0                   0
+Ochrobactrum_vermis                             1                1                     0                      0               0              2                         0                0                   0
+Pantoea_nemavictus                              0                1                     1                      0               0              0                         0                1                   0
+Pseudomonas_berkeleyensis                       0                1                     0                      0               1              0                         0                0                   0
+Pseudomonas_lurida                              0                1                     0                      0               0              0                         0                4                   0
+Sphingobacterium_multivorum                     1                1                     1                      0               1              0                         1                0                   0
+Sphingomonas_molluscorum                        1                0                     2                      0               0              1                         2                0                   0
+Stenotrophomonas_indicatrix                     0                0                     1                      0               0              0                         0                0                   0
+
+Interpretation
+--------------
+The 51 candidate proteins are not dominated by a single functional group.
+The largest initial category is dna_rna_related, followed by toxin/cytotoxic, cell wall/envelope, secretion-system-related, hypothetical/unknown, phage-related, nuclease/endonuclease, transport/membrane, and other functions.
+This supports the idea that the NLS candidate subset contains diverse functional signals rather than only generic hypothetical proteins.
+
+Important limitation
+--------------------
+This is an initial keyword-based classification and must be manually reviewed.
+Some proteins may fit more than one biological category, especially proteins with toxin, nuclease, secretion-system, phage, or DNA/RNA-related annotations.
+The category column should be treated as a first-pass interpretive layer, not as a final biological assignment.
+
+Decision
+--------
+Use nls_unique_candidates_functional_categories.tsv as the first categorized version of the curated NLS candidate dataset.
+The next step can be manual review of category assignments and preparation of a short summary for the meeting with Jose and/or Maryam.

@@ -1,0 +1,42 @@
+Proteome structure search representatives at 50 percent identity
+================================================================
+
+Purpose
+-------
+This file documents the first practical structure-search input derived from MMseqs2 clustering of the CeMbio/Jose proteome.
+The goal is to reduce structure retrieval time by searching representative sequences instead of searching every unique protein sequence individually.
+
+Current status
+--------------
+Unique protein sequences represented: 55174
+Cluster representatives at 50 percent identity: 36488
+Searches saved compared with unique sequences: 18686
+Reduction percent: 33.87%
+Clusters whose representative group contains at least one NLS candidate: 49
+NLS candidate sequence memberships across 50 percent clusters: 51
+
+Input files
+-----------
+proteome_cluster_membership_strategy.tsv: maps each unique sequence to its 90, 70, and 50 percent cluster representatives.
+proteome_structure_search_representatives_50.tsv: table of 50 percent representatives selected for initial structure search.
+proteome_structure_search_representatives_50.fasta: FASTA input for sequence-based structure search.
+
+Interpretation
+--------------
+Exact deduplication alone was not enough to reduce the workload substantially, because the proteome still contained 55,174 unique sequences.
+MMseqs2 clustering at 50 percent identity reduced the first-pass structure search space to 36,488 representative sequences.
+This represents a reduction of approximately 33.87 percent compared with searching every unique sequence independently.
+The 51 validated NLS candidates are still represented within this clustering system and fall into 49 clusters at the 50 percent identity level.
+
+Decision
+--------
+Use proteome_structure_search_representatives_50.fasta as the first broad input for sequence-based structure retrieval.
+Searches performed on these representatives can later be propagated to cluster members using proteome_cluster_membership_strategy.tsv.
+For more conservative propagation, use the 70 percent or 90 percent clustering layers.
+
+Next technical route
+--------------------
+1. Search representatives against UniProt or SwissProt using BLAST or MMseqs.
+2. If UniProt IDs are found, attempt AlphaFold DB retrieval.
+3. If no direct UniProt/AlphaFold match is available, search for homologs with known structures.
+4. If no structure is recoverable, predict structures only for selected high-priority candidates.

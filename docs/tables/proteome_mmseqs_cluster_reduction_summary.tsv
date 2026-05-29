@@ -1,0 +1,5 @@
+level	min_seq_id	representative_sequences	searches_saved_vs_exact_unique	reduction_percent_vs_exact_unique	fasta_path
+exact_unique		55174	0	0.0	/home/daniela/code/celegans-struct-annotator/work/mmseqs/input/proteome_unique_sequence_representatives.fasta
+cluster_90	0.9	52399	2775	5.03	/home/daniela/code/celegans-struct-annotator/work/mmseqs/clusters/proteome_cluster_90_rep_seq.fasta
+cluster_70	0.7	46324	8850	16.04	/home/daniela/code/celegans-struct-annotator/work/mmseqs/clusters/proteome_cluster_70_rep_seq.fasta
+cluster_50	0.5	36488	18686	33.87	/home/daniela/code/celegans-struct-annotator/work/mmseqs/clusters/proteome_cluster_50_rep_seq.fasta

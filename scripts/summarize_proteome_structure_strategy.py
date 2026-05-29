@@ -1,0 +1,53 @@
+from pathlib import Path
+import pandas as pd
+
+base = Path("/mnt/c/Users/Daniela/OneDrive - Universidad Nacional de Colombia/Escritorio/Tareas/Trabajo C.elegans/CeMbio")
+
+table = base / "tables" / "proteome_structure_retrieval_strategy_no_sequence.tsv"
+out = base / "notes" / "proteome_structure_retrieval_strategy_summary.txt"
+
+df = pd.read_csv(table, sep="\t")
+
+with out.open("w", encoding="utf-8") as f:
+    f.write("Proteome structure retrieval strategy summary\n")
+    f.write("============================================\n\n")
+
+    f.write("Purpose\n")
+    f.write("-------\n")
+    f.write("This file documents the first proteome-wide structure retrieval strategy table.\n")
+    f.write("The goal is to support scalable structure retrieval for the full CeMbio/Jose proteome dataset while marking validated NLS candidates as a prioritized subset.\n\n")
+
+    f.write("Current status\n")
+    f.write("--------------\n")
+    f.write(f"Total proteins in strategy table: {len(df)}\n")
+    f.write(f"Proteins with sequence: {df['has_sequence'].sum()}\n")
+    f.write(f"Validated unique NLS candidates: {df['is_unique_nls_candidate'].sum()}\n")
+    f.write(f"Background proteome proteins: {(~df['is_unique_nls_candidate']).sum()}\n\n")
+
+    f.write("Priority groups\n")
+    f.write("---------------\n")
+    f.write(df["priority_group"].value_counts().to_string())
+    f.write("\n\n")
+
+    f.write("ID type counts\n")
+    f.write("--------------\n")
+    f.write(df["id_type_guess"].value_counts().to_string())
+    f.write("\n\n")
+
+    f.write("Recommended first strategy\n")
+    f.write("--------------------------\n")
+    f.write(df["recommended_first_strategy"].value_counts().to_string())
+    f.write("\n\n")
+
+    f.write("Interpretation\n")
+    f.write("--------------\n")
+    f.write("The structure retrieval strategy is now defined at the full-proteome level, not only for the 51 NLS candidates.\n")
+    f.write("This makes the workflow reusable for future filters such as secreted proteins, NLS-positive proteins, functional categories, or prioritized candidates.\n")
+    f.write("Since current identifiers are not assumed to be direct UniProt accessions, the initial recommended route is sequence-based search before structural prediction.\n\n")
+
+    f.write("Decision\n")
+    f.write("--------\n")
+    f.write("Use proteome_structure_retrieval_strategy.tsv as the general structure retrieval planning table.\n")
+    f.write("The next step is to define the first practical sequence-based search route to reduce structure retrieval time before predicting any new structures.\n")
+
+print("Wrote:", out)

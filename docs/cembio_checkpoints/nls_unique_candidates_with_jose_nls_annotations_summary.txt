@@ -1,0 +1,128 @@
+NLS unique candidates with Jose NLS annotations summary
+======================================================
+
+Purpose
+-------
+This file documents the integration of the validated unique NLS candidate subset with the broad NLS annotation sheet from Jose's Excel workbook.
+
+Current status
+--------------
+Rows/proteins: 51
+Organisms represented: 12
+Jose NLS annotations found: 51
+Missing Jose NLS annotations: 0
+Jose ID matches canonical: 51
+
+Candidates by organism
+----------------------
+organism_guess
+Acinetobacter_guillouiae         5
+Chryseobacterium_scophthalmum    6
+Comamonas_piscis                 7
+Enterobacter_hormaechei          3
+Lelliottia_amnigena              4
+Ochrobactrum_vermis              4
+Pantoea_nemavictus               3
+Pseudomonas_berkeleyensis        2
+Pseudomonas_lurida               5
+Sphingobacterium_multivorum      5
+Sphingomonas_molluscorum         6
+Stenotrophomonas_indicatrix      1
+
+Extracellular score summary
+---------------------------
+Min: 0.301
+Max: 0.988
+Mean: 0.691
+
+NLS score summary
+-----------------
+Min: 0.628
+Max: 0.979
+Mean: 0.817
+
+Substrate prediction counts
+---------------------------
+Substrate
+yes     20
+Yes     15
+no      10
+No       5
+Yes      1
+
+Possible secretion system counts
+--------------------------------
+Possible Secretion System
+-                 15
+VI                 6
+III VI             5
+I III IV VI        4
+I III VI           4
+I II III IV VI     3
+II                 3
+II VI              2
+II III VI          1
+I II IV            1
+II III IV          1
+IV VI              1
+I VI               1
+II III IV VI       1
+II IV              1
+I                  1
+IV                 1
+
+Top BLAST annotation labels
+---------------------------
+Anotación funcional BLAST
+Hypothetical protein                                                         18
+Dermonecrotic toxin domain-containing protein                                 2
+RHS repeat-associated core domain-containing protein                          2
+C40 family peptidase                                                          2
+Cell division protein DamX                                                    2
+NH                                                                            2
+S-type pyocin domain-containing protein                                       1
+Superfamily II DNA/RNA helicase                                               1
+LysM peptidoglycan-binding domain-containing protein                          1
+Septal ring lytic transglycosylase RlpA family protein                        1
+DNA/RNA non-specific endonuclease                                             1
+Zinc ribbon domain-containing protein                                         1
+Right-handed parallel beta-helix repeat-containing protein                    1
+DUF6266 family protein                                                        1
+Transglycosylase domain-containing protein                                    1
+AlgP family protein                                                           1
+ribosome alternative rescue factor ArfA                                       1
+T6SS phospholipase effector Tle1-like catalytic domain-containing protein     1
+IS5 family transposase                                                        1
+Endonuclease\nPhage tail protein                                              1
+
+Top AlphaFold2/Foldseek annotation labels
+-----------------------------------------
+Anotación funcional Alphafold2:Foldseek
+NH                                                                                                            6
+Dermonecrotic toxin N-terminal domain-containing protein                                                      2
+HNH endonuclease                                                                                              2
+Cell division protein DamX                                                                                    2
+-                                                                                                             2
+Cytotoxic                                                                                                     1
+Helicase                                                                                                      1
+Type IV secretion protein Rhs                                                                                 1
+missing                                                                                                       1
+Putative transposase                                                                                          1
+Ribosome-recycling factor                                                                                     1
+LysM domain-containing protein                                                                                1
+Putative bacteriophage protein                                                                                1
+Lipoprotein/Putative endopeptidase YafL                                                                       1
+Endolytic peptidoglycan transglycosylase RlpA                                                                 1
+DUF11 domain-containing protein                                                                               1
+Amino acid transporter transmembrane domain-containing protein                                                1
+Endonuclease                                                                                                  1
+Zinc-ribbon domain-containing protein                                                                         1
+T9SS type A sorting domain-containing protein/ Pectate lyase superfamily protein domain-containing protein    1
+
+Interpretation
+--------------
+All 51 validated unique NLS candidate proteins were successfully matched with Jose's broad NLS annotation sheet using canonical_id. This creates the first curated, functionally annotated candidate dataset derived from the CeMbio/Jose proteomes.
+
+Decision
+--------
+Use nls_unique_candidates_with_jose_nls_annotations.tsv as the current main curated candidate dataset. The next step can be to classify the 51 proteins into broad functional categories such as toxins, nucleases, transport/membrane proteins, cell wall/envelope proteins, phage-related proteins, hypothetical proteins, and unknown/no-hit proteins.

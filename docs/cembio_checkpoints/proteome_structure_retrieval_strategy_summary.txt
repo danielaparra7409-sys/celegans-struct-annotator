@@ -1,0 +1,44 @@
+Proteome structure retrieval strategy summary
+============================================
+
+Purpose
+-------
+This file documents the first proteome-wide structure retrieval strategy table.
+The goal is to support scalable structure retrieval for the full CeMbio/Jose proteome dataset while marking validated NLS candidates as a prioritized subset.
+
+Current status
+--------------
+Total proteins in strategy table: 55534
+Proteins with sequence: 55534
+Validated unique NLS candidates: 51
+Background proteome proteins: 55483
+
+Priority groups
+---------------
+priority_group
+background_proteome               55483
+validated_unique_nls_candidate       51
+
+ID type counts
+--------------
+id_type_guess
+ENA_pipe_header                            24163
+assembly_or_contig_protein_header          18164
+RefSeq_or_GenBank_NZ_contig_header          8048
+GenBank_accession_contig_protein_header     5159
+
+Recommended first strategy
+--------------------------
+recommended_first_strategy
+sequence_based_search_first    55534
+
+Interpretation
+--------------
+The structure retrieval strategy is now defined at the full-proteome level, not only for the 51 NLS candidates.
+This makes the workflow reusable for future filters such as secreted proteins, NLS-positive proteins, functional categories, or prioritized candidates.
+Since current identifiers are not assumed to be direct UniProt accessions, the initial recommended route is sequence-based search before structural prediction.
+
+Decision
+--------
+Use proteome_structure_retrieval_strategy.tsv as the general structure retrieval planning table.
+The next step is to define the first practical sequence-based search route to reduce structure retrieval time before predicting any new structures.
