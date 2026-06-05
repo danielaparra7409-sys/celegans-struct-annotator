@@ -1,0 +1,10 @@
+swissprot_accession	swissprot_entry	swissprot_protein_name	manual_review_confidence	alphafold_status	alphafold_lookup_note	representative_canonical_id	representative_organism	pident	alnlen	evalue	bits
+P21679	BPD_BP186	Probable baseplate hub protein	strong_sequence_hit	not_found	not in AlphaFold DB (404)	CP058553.1_1743	Enterobacter_hormaechei	80.7	385	7.518e-206	640
+Q8X826	DAMX_ECO57	Cell division protein DamX	strong_sequence_hit	found	AlphaFold DB v6, pLDDT=58.78	CP058553.1_986	Enterobacter_hormaechei	58.1	434	4.024e-152	487
+P03009	TRA2_ECOLX	Probable transposase for transposon Tn903	strong_sequence_hit	found	AlphaFold DB v6, pLDDT=91.0	JACAWY010000001.1_971	Pantoea_nemavictus	83.7	231	2.353e-126	401
+P76190	MEPH_ECOLI	Murein DD-endopeptidase MepH	strong_sequence_hit	found	AlphaFold DB v6, pLDDT=77.75	JACAWY010000001.1_3587	Pantoea_nemavictus	54.0	232	1.118e-69	239
+P0DUH5	DDDA_BURC1	Double-stranded DNA deaminase toxin A	moderate_sequence_hit	found	AlphaFold DB v6, pLDDT=79.62	CP023272.1_5354	Pseudomonas_lurida	32.2	1263	2.313e-187	632
+Q1RKC5	PBPA_RICBR	Penicillin-binding protein 1A	moderate_sequence_hit	found	AlphaFold DB v6, pLDDT=89.25	NZ_SLYP02000001.1_888	Sphingomonas_molluscorum	41.0	749	3.66e-161	532
+P15276	ALGP_PSEAE	Transcriptional regulatory protein AlgP	moderate_sequence_hit	found	AlphaFold DB v6, pLDDT=61.94	CP059139.1_349	Pseudomonas_berkeleyensis	38.6	352	1.238e-65	232
+Q0AIQ0	MTGA_NITEC	Biosynthetic peptidoglycan transglycosylase	moderate_sequence_hit	found	AlphaFold DB v6, pLDDT=92.56	CP058555.1_4528	Sphingobacterium_multivorum	46.7	145	7.874e-28	126
+Q0IH72	EXOG_XENLA	Nuclease EXOG, mitochondrial	moderate_sequence_hit	found	AlphaFold DB v6, pLDDT=87.75	CP058554.1_3501	Comamonas_piscis	32.2	172	1.603e-17	89

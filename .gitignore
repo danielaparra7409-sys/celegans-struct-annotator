@@ -50,6 +50,11 @@ docs/tables/proteome_structure_search_representatives_50_no_sequence.tsv
 *.fa
 *.faa
 
+# Structure files (stored locally, never versioned)
+*.cif
+*.pdb
+*.bcif
+
 # External spreadsheets
 *.xlsx
 *.xls

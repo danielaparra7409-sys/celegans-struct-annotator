@@ -1,0 +1,87 @@
+NLS 50 percent AlphaFold pilot summary
+=======================================
+
+Date
+----
+2026-06-04
+
+Purpose
+-------
+Retrieve AlphaFold DB structures for the 9 priority SwissProt accessions identified in the
+NLS 50% representative pilot search (strong + moderate confidence hits).
+
+This checkpoint closes the AlphaFold retrieval step and documents what was found, what was
+not found, and what should be done next.
+
+Context
+-------
+- 49 NLS cluster representatives at 50% identity were searched against SwissProt.
+- 19 of 49 reps matched at least one SwissProt entry (585 total hits).
+- 18 unique SwissProt accessions were identified.
+- 9 were selected as priority targets (alphafold_lookup_priority <= 2):
+    4 strong_sequence_hit
+    5 moderate_sequence_hit
+
+Script
+------
+scripts/fetch_nls50_alphafold_pilot.py
+- Queries the AlphaFold EBI API: https://alphafold.ebi.ac.uk/api/prediction/{accession}
+- Downloads .cif and .pdb from the versioned URLs returned by the API
+- Updates nls50_swissprot_accessions_for_alphafold.tsv in place
+- Idempotent: skips rows where alphafold_status != "pending"
+
+Results
+-------
+Targets attempted : 9
+Found             : 8
+Not in AlphaFold  : 1
+Errors            : 0
+AlphaFold DB ver  : v6
+
+Found accessions
+----------------
+Accession  Entry       Protein name                              Confidence            pLDDT
+Q8X826     DAMX_ECO57  Cell division protein DamX                strong_sequence_hit   58.78
+P03009     TRA2_ECOLX  Probable transposase for Tn903            strong_sequence_hit   91.0
+P76190     MEPH_ECOLI  Murein DD-endopeptidase MepH              strong_sequence_hit   77.75
+P0DUH5     DDDA_BURC1  Double-stranded DNA deaminase toxin A     moderate_sequence_hit 79.62
+Q1RKC5     PBPA_RICBR  Penicillin-binding protein 1A             moderate_sequence_hit 89.25
+P15276     ALGP_PSEAE  Transcriptional regulatory protein AlgP   moderate_sequence_hit 61.94
+Q0AIQ0     MTGA_NITEC  Biosynthetic peptidoglycan transglycosylase moderate_sequence_hit 92.56
+Q0IH72     EXOG_XENLA  Nuclease EXOG, mitochondrial              moderate_sequence_hit 87.75
+
+Not found
+---------
+P21679  BPD_BP186  Probable baseplate hub protein  (strong_sequence_hit)
+Reason: bacteriophage protein (Escherichia phage 186); phage proteins are generally absent
+from AlphaFold DB. The CeMbio representative (CP058553.1_1743, Enterobacter hormaechei,
+80.7% identity) is a candidate for direct structure prediction via ESMFold or ColabFold.
+
+Local structure files
+---------------------
+16 files saved locally (not in repo):
+  $BASE/structures/alphafold/AF-{accession}-F1-model_latest.cif  (8 files)
+  $BASE/structures/alphafold/AF-{accession}-F1-model_latest.pdb  (8 files)
+Total size: ~6.3 MB
+
+Versionable summary table
+--------------------------
+docs/tables/nls50_alphafold_pilot_results.tsv
+(9 priority rows, no sequences, no local file paths)
+
+Caution
+-------
+Structures retrieved are for SwissProt homologs, NOT the original CeMbio proteins.
+- A SwissProt homolog structure can guide functional interpretation but does NOT
+  represent the exact structure of the CeMbio representative protein.
+- Sequence identity to SwissProt varies from 32% (Q8X826, Q0IH72) to 84% (P03009).
+- Low-pLDDT values (Q8X826=58.78, P15276=61.94) indicate disordered regions; interpret
+  those structures with additional caution.
+- All functional categories derived from these hits remain exploratory and keyword-based.
+
+Next steps
+----------
+1. Manual review of 9 downloaded structures (pLDDT profiles, domain coverage).
+2. Decide fate of P21679 cluster: ESMFold or ColabFold on CeMbio representative.
+3. Review weak/low-confidence hits (priority 3+4, currently "pending") before expanding.
+4. After pilot validates, scale retrieval to 36,488 proteome-wide representatives.
