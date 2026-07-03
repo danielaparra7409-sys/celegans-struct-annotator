@@ -1,0 +1,9 @@
+Modelo: Ensemble regresión logística (n=50, bootstrap)
+Tarea: predicción de divergencia funcional (diff GO) dada similitud estructural (TM≥0.5)
+Dataset: 12272 pares | Divergente: 956 (7.8%)
+AUC: 0.764
+Accuracy: 0.621
+Precision: 0.148
+Recall: 0.782
+F1: 0.249
+CM: TN=1370 FP=888 FN=43 TP=154
